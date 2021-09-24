@@ -18,4 +18,11 @@ class Project extends Model
     // Timestamps
     public $timestamps = true;
 
+     //relation with Tasks table by pro_id key
+     public function proTasks()
+     {
+       return $this->hasMany(Task::class, 'tas_pro_id');
+     }    
+    
+
 }
